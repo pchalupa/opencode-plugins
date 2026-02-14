@@ -2,7 +2,7 @@ import type { Plugin } from '@opencode-ai/plugin';
 
 export const Peon: Plugin = async ({ $, directory }) => {
   const VOLUME_FULL = 0.5;
-  const VOLUME_BACKGROUND = 0.3;
+  const VOLUME_BACKGROUND = 0.25;
 
   const play = async (file: string, volume = VOLUME_FULL) => {
     try {
