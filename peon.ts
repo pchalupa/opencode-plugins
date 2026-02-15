@@ -1,12 +1,13 @@
 import type { Plugin } from '@opencode-ai/plugin';
 
-export const Peon: Plugin = async ({ $, directory }) => {
+export const Peon: Plugin = async ({ $ }) => {
   const VOLUME_FULL = 0.75;
   const VOLUME_BACKGROUND = 0.25;
+  const PLUGINS_DIR = `${process.env.HOME}/.config/opencode/plugins`;
 
   const play = async (file: string, volume = VOLUME_FULL) => {
     try {
-      await $`afplay -v ${volume} ${directory}/assets/audio/${file}`.quiet();
+      await $`afplay -v ${volume} ${PLUGINS_DIR}/assets/audio/${file}`.quiet();
     } catch (error) {}
   };
 
