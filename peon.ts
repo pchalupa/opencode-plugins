@@ -1,7 +1,7 @@
 import type { Plugin } from '@opencode-ai/plugin';
 
 export const Peon: Plugin = async ({ $ }) => {
-  const VOLUME_FULL = 0.75;
+  const VOLUME_FULL = 0.5;
   const VOLUME_BACKGROUND = 0.25;
   const PLUGINS_DIR = `${process.env.HOME}/.config/opencode/plugins`;
 
